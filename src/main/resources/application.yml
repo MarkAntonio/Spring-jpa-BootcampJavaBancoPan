@@ -10,6 +10,7 @@ spring:
     show-sql: true  # serve para mostrar o log dos comandos do sql no console
     hibernate:
       ddl-auto: update # serve para a cada vez que eu fechar e abrir o servidor, ele compara se tem algo difrente e atualiza
+      #drop - serve para começar a tabela do zero (nunca fazer isso no trabalho)
     properties:
       hibernate.format_sql: true
 

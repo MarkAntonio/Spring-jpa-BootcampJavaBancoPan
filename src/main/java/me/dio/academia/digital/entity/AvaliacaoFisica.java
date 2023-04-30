@@ -3,7 +3,6 @@ package me.dio.academia.digital.entity;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
-import lombok.RequiredArgsConstructor;
 
 import javax.persistence.*;
 import java.time.LocalDateTime;
@@ -18,6 +17,8 @@ public class AvaliacaoFisica {
   @GeneratedValue(strategy = GenerationType.IDENTITY)
   private Long id;
 
+
+  // Não é recomendável utilizar o relacionamento bi-direcional (é sempre melhor o uni-direcional)
   @ManyToOne(cascade =  CascadeType.ALL)  //many (avaliações) one (aluno) - são várias avaliações (List) para um aluno
   // cascade All que dizer que tudo que eu fizer na avaliação física reflete em aluno
   @JoinColumn(name = "aluno_id")

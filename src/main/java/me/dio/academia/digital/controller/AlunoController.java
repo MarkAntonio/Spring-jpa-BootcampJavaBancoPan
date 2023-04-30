@@ -17,12 +17,8 @@ public class AlunoController {
   @Autowired
   private AlunoServiceImpl service;
 
-  @GetMapping
-  public List<Aluno> getAll(){
-    return service.getAll(null);
-  }
-
-  @PostMapping
+  @PostMapping  //o @Valid é quem habilita a validação no AlunoForm (sobre que o cpf tem que ser correto, que o nome
+  // não pode ser vazio (@NotBlank) etc)
   public Aluno create(@Valid @RequestBody AlunoForm form) {
     return service.create(form);
   }
