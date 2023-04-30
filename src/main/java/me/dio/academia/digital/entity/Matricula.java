@@ -17,8 +17,8 @@ public class Matricula {
   @Id
   @GeneratedValue(strategy = GenerationType.IDENTITY)
   private Long id;
-
-  @OneToOne(cascade = CascadeType.ALL)
+  //Cascade ALl - se eu excluir uma matricula eu excluo um aluno
+  @OneToOne(cascade = CascadeType.ALL) //uma matrícula(one) só tem um aluno(one)
   @JoinColumn(name = "aluno_id")
   private Aluno aluno;
 

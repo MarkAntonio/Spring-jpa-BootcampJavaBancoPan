@@ -1,15 +1,15 @@
 
-server.port: 8081
+#server.port: 8081
 
 spring:
   datasource:
     url: jdbc:postgresql://localhost:5432/academia?useTimezone=true&serverTimezone=UTC&useLegacyDate
-    username: cami
-    password: root
+    username: postgres
+    password: marcos12345
   jpa:
-    show-sql: true
+    show-sql: true  # serve para mostrar o log dos comandos do sql no console
     hibernate:
-      ddl-auto: update
+      ddl-auto: update # serve para a cada vez que eu fechar e abrir o servidor, ele compara se tem algo difrente e atualiza
     properties:
       hibernate.format_sql: true
 

@@ -18,7 +18,8 @@ public class AvaliacaoFisica {
   @GeneratedValue(strategy = GenerationType.IDENTITY)
   private Long id;
 
-  @ManyToOne
+  @ManyToOne(cascade =  CascadeType.ALL)  //many (avaliações) one (aluno) - são várias avaliações (List) para um aluno
+  // cascade All que dizer que tudo que eu fizer na avaliação física reflete em aluno
   @JoinColumn(name = "aluno_id")
   private Aluno aluno;
 
